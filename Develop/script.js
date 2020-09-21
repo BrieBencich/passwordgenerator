@@ -18,10 +18,14 @@ var charType = prompt("Enter a character type: special, numeric, uppercase, lowe
 function generatePassword() { 
 var charSet = "Password:"; 
 var charTypeLower =chartType.tolowercase ();
-if (charTypeLower= "lowercase"){
-  charSet = "abcdefghijklmnopqrstuvwxyz";
-
-}
+if (charTypeLower === "lowercase"){
+  charSet = "abcdefghijklmnopqrstuvwxyz";}
+else if (charTypeLower === "uppercase"){
+  charSet = "ABCDEFGHIJKLMNOPRSTUVWXYZ";}
+else if (charTypeLower ==== "numeric"){
+  charSet = "0123456789";}
+else if (charTypeLower === "special") {
+  charSet - "~`!@#$%^&*(){}\|}{';:"; 
 }
 
 
