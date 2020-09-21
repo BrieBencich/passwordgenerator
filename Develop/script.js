@@ -17,7 +17,7 @@ var charType = prompt("Enter a character type: special, numeric, uppercase, lowe
 // characters that will generate your password
 function generatePassword() { 
 var charSet = "Password:"; 
-var charTypeLower =chartType.tolowercase ();
+var charTypeLower = chartType.toLowerCase ();
 if (charTypeLower === "lowercase"){
   charSet = "abcdefghijklmnopqrstuvwxyz";}
 else if (charTypeLower === "uppercase"){
@@ -26,6 +26,16 @@ else if (charTypeLower ==== "numeric"){
   charSet = "0123456789";}
 else if (charTypeLower === "special") {
   charSet - "~`!@#$%^&*(){}\|}{';:"; 
+}
+
+// return values 
+var retVal = "Password:";
+for (var i = 0; i < length; i++){
+  // Random generator for Password 
+  retVal += charSet.charAt(Math.floor(Math.random() * charSet.lenth));
+}
+return retVal;
+
 }
 
 
