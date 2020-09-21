@@ -15,29 +15,31 @@ var criteria= window.alert(" Please choose one of the following option, by typin
 var charType = prompt("Enter a character type: special, numeric, uppercase, lowercase.");
 
 // characters that will generate your password
-function generatePassword() { 
-var charSet = "Password:"; 
-var charTypeLower = chartType.toLowerCase ();
-if (charTypeLower === "lowercase"){
-  charSet = "abcdefghijklmnopqrstuvwxyz";}
-else if (charTypeLower === "uppercase"){
-  charSet = "ABCDEFGHIJKLMNOPRSTUVWXYZ";}
-else if (charTypeLower ==== "numeric"){
-  charSet = "0123456789";}
-else if (charTypeLower === "special") {
-  charSet - "~`!@#$%^&*(){}\|}{';:"; 
+// how do I get it to choose more then one item ?? 
+function generatePassword() {
+  var charSet = "Password:";
+  var charTypeLower = charType.toLowerCase ();
+  if( charTypeLower === "lowercase" ) {
+    charSet = "abcdefghijklmnopqrstuvwxyz";
+  } else if( charTypeLower === "uppercase") {
+    charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }  else if( charTypeLower === "numeric" ) {
+    charSet = "0123456789";
+  }  else if( charTypeLower === "special" ) {
+    charSet = "`!@#$%^&*(){}[]';:";
+  } 
+  
+  
+  
+  
+  // return
+  var retVal = "Password:";
+  for (var i = 0; i < length; i++) {
+    //random generator for password 
+    retVal += charSet.charAt(Math.floor(Math.random() * charSet.length));
+  }
+  return retVal;
 }
-
-// return values 
-var retVal = "Password:";
-for (var i = 0; i < length; i++){
-  // Random generator for Password 
-  retVal += charSet.charAt(Math.floor(Math.random() * charSet.lenth));
-}
-return retVal;
-
-}
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
