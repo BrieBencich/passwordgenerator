@@ -4,6 +4,13 @@
 // Prompts stating the criteria for the Password.
 var criteria = window.alert("Please select the correct criteria you wish, to generate your new password. Password must be between 8-128 characters, with either lowercase, uppercase, specaial, or numeric chatacters. ");
 
+// Amount of Characters in Password
+var length = Number(prompt("Please choose how many characters your password will be ? Only between 8-128 Characters Please."));
+
+// Prompt to let you know how to pick your character. 
+
+var criteria= window.alert(" Please choose one of the following option, by typing it in the text ")
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
