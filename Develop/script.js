@@ -11,6 +11,19 @@ var length = Number(prompt("Please choose how many characters your password will
 
 var criteria= window.alert(" Please choose one of the following option, by typing it in the text ")
 
+// Type of Characters you would like 
+var charType = prompt("Enter a character type: special, numeric, uppercase, lowercase.");
+
+// characters that will generate your password
+function generatePassword() { 
+var charSet = "Password:"; 
+var charTypeLower =chartType.tolowercase ();
+if (charTypeLower= "lowercase"){
+  charSet = "abcdefghijklmnopqrstuvwxyz";
+
+}
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
